@@ -45,5 +45,30 @@
         android:name="com.example.socialpuig.UsernameFragment"
         android:label="fragment_username"
         tools:layout="@layout/fragment_username" />
+    <fragment
+        android:id="@+id/homeAllFragment"
+        android:name="com.example.socialpuig.HomeAllFragment"
+        android:label="fragment_home_all"
+        tools:layout="@layout/fragment_home_all" />
+    <fragment
+        android:id="@+id/socialFragment"
+        android:name="com.example.socialpuig.SocialFragment"
+        android:label="fragment_social"
+        tools:layout="@layout/fragment_social" />
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.socialpuig.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="com.example.socialpuig.RankingFragment"
+        android:label="fragment_ranking"
+        tools:layout="@layout/fragment_ranking" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.socialpuig.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
 
 </navigation>

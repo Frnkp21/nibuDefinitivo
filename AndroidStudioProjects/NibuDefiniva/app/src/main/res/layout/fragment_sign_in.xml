@@ -23,7 +23,7 @@
         android:contentDescription="nibupet"
         android:layout_width="0dp"
         android:layout_height="158dp"
-        app:layout_constraintTop_toTopOf="@id/nibulogo"
+        app:layout_constraintTop_toBottomOf="@id/nibulogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/signInForm"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/nibupet"
+        app:layout_constraintTop_toBottomOf="@id/nibupet"
         android:gravity="center_vertical|center_horizontal"
         android:id="@+id/signInForm">
 
@@ -74,9 +74,9 @@
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/googleSignInButton"
-            android:layout_width="400dp"
+            android:layout_width="380dp"
             android:layout_marginBottom="16dp"
-            android:layout_height="50dp" />
+            android:layout_height="40dp" />
 
         <TextView
             android:id="@+id/gotoCreateAccountTextView"
