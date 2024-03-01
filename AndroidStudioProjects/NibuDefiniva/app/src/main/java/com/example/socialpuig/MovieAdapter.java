@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
+import com.bumptech.glide.Glide;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
@@ -28,9 +29,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie movie = movieList.get(position);
         holder.movieTitle.setText(movie.getTitle());
-        // Aquí cargarías la imagen del póster de la película utilizando una biblioteca como Glide o Picasso
-        // Glide.with(holder.itemView.getContext()).load(movie.getPosterUrl()).into(holder.moviePoster);
+        // Cargar la imagen del póster de la película utilizando Glide
+        Glide.with(holder.itemView.getContext()).load(movie.getPosterUrl()).into(holder.moviePoster);
     }
+
 
     @Override
     public int getItemCount() {

@@ -1,4 +1,4 @@
-package com.example.socialpuig;
+package com.example.socialpuig.more;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.socialpuig.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SavedFragment#newInstance} factory method to
+ * Use the {@link MoreFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SavedFragment extends Fragment {
+public class MoreFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class SavedFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SavedFragment() {
+    public MoreFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class SavedFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SavedFragment.
+     * @return A new instance of fragment MoreFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SavedFragment newInstance(String param1, String param2) {
-        SavedFragment fragment = new SavedFragment();
+    public static MoreFragment newInstance(String param1, String param2) {
+        MoreFragment fragment = new MoreFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class SavedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saved, container, false);
+        return inflater.inflate(R.layout.fragment_more, container, false);
     }
 }

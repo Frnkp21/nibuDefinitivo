@@ -1,4 +1,4 @@
-package com.example.socialpuig;
+package com.example.socialpuig.home;
 
 import android.os.Bundle;
 
@@ -17,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.socialpuig.AppViewModel;
+import com.example.socialpuig.Post;
+import com.example.socialpuig.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;

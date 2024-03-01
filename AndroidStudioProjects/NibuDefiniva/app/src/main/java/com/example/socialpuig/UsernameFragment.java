@@ -35,7 +35,7 @@ public class UsernameFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Navegar a otro Fragmento
-                navController.navigate(R.id.homeAllFragment);
+                navController.navigate(R.id.homeRealFragment);
             }
         });
 
