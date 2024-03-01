@@ -1,5 +1,7 @@
 package com.example.socialpuig;
 
+import static com.example.socialpuig.MovieDataSource.getMovieList;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,38 +12,56 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.socialpuig.databinding.ActivityMainBinding;
+import com.example.socialpuig.databinding.FragmentHomeAllBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.List;
+
+
 public class HomeAllFragment extends Fragment {
+    private FragmentHomeAllBinding binding;
+   // private RecyclerView recyclerView;
 
-    private ActivityMainBinding binding;
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        binding = ActivityMainBinding.inflate(inflater, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentHomeAllBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        BottomNavigationView navView = view.findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        // Configurar BottomNavigationView
+        BottomNavigationView navView = binding.navView;
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.homeAllFragment);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.socialFragment, R.id.savedFragment, R.id.homeAllFragment,R.id.rankingFragment,R.id.moreFragment)
-                .build();
-        NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+                R.id.socialFragment, R.id.savedFragment, R.id.homeAllFragment, R.id.rankingFragment, R.id.moreFragment
+        ).build();
         NavigationUI.setupActionBarWithNavController((AppCompatActivity) requireActivity(), navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        NavigationUI.setupWithNavController(navView, navController);
+        // Configurar RecyclerView
+        //recyclerView = binding.recyclerView;
+        //loadMovieList();
     }
+
+   /* private void loadMovieList() {
+        List<Movie> movieList = MovieDataSource.getMovieList();
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        MovieAdapter adapter = new MovieAdapter(movieList);
+        recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }*/
 }
