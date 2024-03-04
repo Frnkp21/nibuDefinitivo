@@ -1,4 +1,4 @@
-package com.example.socialpuig;
+package com.example.socialpuig.movies;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import com.bumptech.glide.Glide;
+import com.example.socialpuig.R;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
@@ -29,6 +30,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie movie = movieList.get(position);
         holder.movieTitle.setText(movie.getTitle());
+       // holder.movieInfo.setText(movie.getSynopsis());
         // Cargar la imagen del póster de la película utilizando Glide
         Glide.with(holder.itemView.getContext()).load(movie.getPosterUrl()).into(holder.moviePoster);
     }
@@ -42,11 +44,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView moviePoster;
         TextView movieTitle;
+      //  TextView movieInfo;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             moviePoster = itemView.findViewById(R.id.moviePoster);
             movieTitle = itemView.findViewById(R.id.movieTitle);
+            //movieInfo = itemView.findViewById(R.id.movieInfo);
         }
     }
 }

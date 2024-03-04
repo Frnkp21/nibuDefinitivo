@@ -1,14 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".saved.SavedFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/nibulogo"
+        android:layout_width="84dp"
+        android:layout_height="30dp"
+        android:contentDescription="nibulogo"
+        android:src="@drawable/nibulogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/SavedText" />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/SavedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVED"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/nibulogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/saved2" />
+    <View
+        android:id="@+id/edit"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/edit"
+        app:layout_constraintStart_toEndOf="@id/SavedText"
+        app:layout_constraintTop_toBottomOf="@id/nibulogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/SavedText" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/saved1"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved1"
+        app:layout_constraintTop_toBottomOf="@id/SavedText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/saved2"
+        app:layout_constraintBottom_toTopOf="@id/saved4" />
+    <ImageView
+        android:id="@+id/saved2"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved2"
+        app:layout_constraintTop_toBottomOf="@id/SavedText"
+        app:layout_constraintStart_toEndOf="@id/saved1"
+        app:layout_constraintEnd_toStartOf="@id/saved3"
+        app:layout_constraintBottom_toTopOf="@id/saved5" />
+    <ImageView
+        android:id="@+id/saved3"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved3"
+        app:layout_constraintTop_toBottomOf="@id/SavedText"
+        app:layout_constraintStart_toEndOf="@id/saved2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/saved6" />
+    <ImageView
+        android:id="@+id/saved4"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved4"
+        app:layout_constraintTop_toBottomOf="@id/saved1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/saved5"
+        app:layout_constraintBottom_toTopOf="@id/saved7" />
+    <ImageView
+        android:id="@+id/saved5"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved5"
+        app:layout_constraintTop_toBottomOf="@id/saved2"
+        app:layout_constraintStart_toEndOf="@id/saved4"
+        app:layout_constraintEnd_toStartOf="@id/saved6"
+        app:layout_constraintBottom_toTopOf="@id/saved8" />
+    <ImageView
+        android:id="@+id/saved6"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved6"
+        app:layout_constraintTop_toBottomOf="@id/saved3"
+        app:layout_constraintStart_toEndOf="@id/saved5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/saved9" />
+    <ImageView
+        android:id="@+id/saved7"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved7"
+        app:layout_constraintTop_toBottomOf="@id/saved4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/saved8"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <ImageView
+        android:id="@+id/saved8"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved8"
+        app:layout_constraintTop_toBottomOf="@id/saved5"
+        app:layout_constraintStart_toEndOf="@id/saved7"
+        app:layout_constraintEnd_toStartOf="@id/saved9"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <ImageView
+        android:id="@+id/saved9"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved9"
+        app:layout_constraintTop_toBottomOf="@id/saved6"
+        app:layout_constraintStart_toEndOf="@id/saved8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

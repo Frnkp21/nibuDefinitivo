@@ -1,23 +1,55 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="220dp"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="16dp">
+
+<ImageView
+    android:id="@+id/moviePoster"
+    android:layout_width="100dp"
+    android:layout_height="150dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/nibupet" />
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
-
-    <ImageView
-        android:id="@+id/moviePoster"
-        android:layout_width="112dp"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/nibupet" />
+    android:layout_toEndOf="@id/moviePoster"
+    android:layout_marginStart="16dp">
 
     <TextView
         android:id="@+id/movieTitle"
-        android:layout_width="121dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="8dp"
-        android:text="Movie Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Title"
         android:textColor="@android:color/white"
-        android:textSize="16sp" />
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:ellipsize="end" />
 
 </LinearLayout>
+
+    <ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/moviePoster"
+    android:layout_alignEnd="@id/moviePoster"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="-40dp"
+    android:layout_marginEnd="-36dp"
+    android:background="@android:color/transparent"
+    android:src="@drawable/play" />
+
+    <ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/moviePoster"
+    android:layout_alignEnd="@id/moviePoster"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="-40dp"
+    android:layout_marginEnd="-81dp"
+    android:background="@android:color/transparent"
+    android:src="@drawable/settings" />
+
+</RelativeLayout>
+

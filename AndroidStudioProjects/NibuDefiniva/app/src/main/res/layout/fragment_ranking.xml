@@ -1,14 +1,903 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ranking.RankingFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        tools:context=".saved.SavedFragment">
+    <ImageView
+        android:id="@+id/nibulogo"
+        android:layout_width="84dp"
+        android:layout_height="30dp"
+        android:contentDescription="nibulogo"
+        android:src="@drawable/nibulogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rankingText" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/rankingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RANKING"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/nibulogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rank1"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rankingText">
+
+        <ImageView
+            android:id="@+id/rankingImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#1"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg"
+            app:layout_constraintTop_toTopOf="@id/rankingImg"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg"/>
+
+        <TextView
+            android:id="@+id/ranktitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position1"
+            app:layout_constraintTop_toTopOf="@id/position1"
+            app:layout_constraintBottom_toBottomOf="@id/position1"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes"/>
+
+        <TextView
+            android:id="@+id/ranklikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle"
+            app:layout_constraintTop_toTopOf="@id/ranktitle"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+            android:id="@+id/likesImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes"
+            app:layout_constraintTop_toTopOf="@id/ranklikes"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank1">
+
+        <ImageView
+            android:id="@+id/rankingImg2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#2"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg2"
+            app:layout_constraintTop_toTopOf="@id/rankingImg2"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg2"/>
+
+        <TextView
+            android:id="@+id/ranktitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position2"
+            app:layout_constraintTop_toTopOf="@id/position2"
+            app:layout_constraintBottom_toBottomOf="@id/position2"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes2"/>
+
+        <TextView
+            android:id="@+id/ranklikes2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle2"
+            app:layout_constraintTop_toTopOf="@id/ranktitle2"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle2"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes2"
+            app:layout_constraintTop_toTopOf="@id/ranklikes2"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes2"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank2">
+
+        <ImageView
+            android:id="@+id/rankingImg3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#2"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg3"
+            app:layout_constraintTop_toTopOf="@id/rankingImg3"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg3"/>
+
+        <TextView
+            android:id="@+id/ranktitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position3"
+            app:layout_constraintTop_toTopOf="@id/position3"
+            app:layout_constraintBottom_toBottomOf="@id/position3"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes3"/>
+
+        <TextView
+            android:id="@+id/ranklikes3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle3"
+            app:layout_constraintTop_toTopOf="@id/ranktitle3"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle3"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes3"
+            app:layout_constraintTop_toTopOf="@id/ranklikes3"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes3"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank3">
+
+        <ImageView
+            android:id="@+id/rankingImg4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#4"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg4"
+            app:layout_constraintTop_toTopOf="@id/rankingImg4"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg4"/>
+
+        <TextView
+            android:id="@+id/ranktitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position4"
+            app:layout_constraintTop_toTopOf="@id/position4"
+            app:layout_constraintBottom_toBottomOf="@id/position4"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes4"/>
+
+        <TextView
+            android:id="@+id/ranklikes4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle4"
+            app:layout_constraintTop_toTopOf="@id/ranktitle4"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle4"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes4"
+            app:layout_constraintTop_toTopOf="@id/ranklikes4"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes4"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank4">
+
+        <ImageView
+            android:id="@+id/rankingImg5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#5"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg5"
+            app:layout_constraintTop_toTopOf="@id/rankingImg5"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg5"/>
+
+        <TextView
+            android:id="@+id/ranktitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position5"
+            app:layout_constraintTop_toTopOf="@id/position5"
+            app:layout_constraintBottom_toBottomOf="@id/position5"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes5"/>
+
+        <TextView
+            android:id="@+id/ranklikes5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle5"
+            app:layout_constraintTop_toTopOf="@id/ranktitle5"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes5"
+            app:layout_constraintTop_toTopOf="@id/ranklikes5"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank6"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank5">
+
+        <ImageView
+            android:id="@+id/rankingImg6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#6"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg6"
+            app:layout_constraintTop_toTopOf="@id/rankingImg6"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg6"/>
+
+        <TextView
+            android:id="@+id/ranktitle6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position6"
+            app:layout_constraintTop_toTopOf="@id/position6"
+            app:layout_constraintBottom_toBottomOf="@id/position6"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes6"/>
+
+        <TextView
+            android:id="@+id/ranklikes6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle6"
+            app:layout_constraintTop_toTopOf="@id/ranktitle6"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle6"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes6"
+            app:layout_constraintTop_toTopOf="@id/ranklikes6"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes6"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank7"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank6">
+
+        <ImageView
+            android:id="@+id/rankingImg7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#7"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg7"
+            app:layout_constraintTop_toTopOf="@id/rankingImg7"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg7"/>
+
+        <TextView
+            android:id="@+id/ranktitle7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position7"
+            app:layout_constraintTop_toTopOf="@id/position7"
+            app:layout_constraintBottom_toBottomOf="@id/position7"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes7"/>
+
+        <TextView
+            android:id="@+id/ranklikes7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle7"
+            app:layout_constraintTop_toTopOf="@id/ranktitle7"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle7"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes7"
+            app:layout_constraintTop_toTopOf="@id/ranklikes7"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes7"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank8"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank7">
+
+        <ImageView
+            android:id="@+id/rankingImg8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#8"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg8"
+            app:layout_constraintTop_toTopOf="@id/rankingImg8"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg8"/>
+
+        <TextView
+            android:id="@+id/ranktitle8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position8"
+            app:layout_constraintTop_toTopOf="@id/position8"
+            app:layout_constraintBottom_toBottomOf="@id/position8"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes8"/>
+
+        <TextView
+            android:id="@+id/ranklikes8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle8"
+            app:layout_constraintTop_toTopOf="@id/ranktitle8"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle8"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes8"
+            app:layout_constraintTop_toTopOf="@id/ranklikes8"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes8"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank9"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank8">
+
+        <ImageView
+            android:id="@+id/rankingImg9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#9"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg9"
+            app:layout_constraintTop_toTopOf="@id/rankingImg9"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg9"/>
+
+        <TextView
+            android:id="@+id/ranktitle9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position9"
+            app:layout_constraintTop_toTopOf="@id/position9"
+            app:layout_constraintBottom_toBottomOf="@id/position9"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes9"/>
+
+        <TextView
+            android:id="@+id/ranklikes9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle9"
+            app:layout_constraintTop_toTopOf="@id/ranktitle9"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle9"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes9"
+            app:layout_constraintTop_toTopOf="@id/ranklikes9"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes9"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank10"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank9">
+
+        <ImageView
+            android:id="@+id/rankingImg10"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#10"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg10"
+            app:layout_constraintTop_toTopOf="@id/rankingImg10"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg10"/>
+
+        <TextView
+            android:id="@+id/ranktitle10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position10"
+            app:layout_constraintTop_toTopOf="@id/position10"
+            app:layout_constraintBottom_toBottomOf="@id/position10"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes10"/>
+
+        <TextView
+            android:id="@+id/ranklikes10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle10"
+            app:layout_constraintTop_toTopOf="@id/ranktitle10"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle10"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes10"
+            app:layout_constraintTop_toTopOf="@id/ranklikes10"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes10"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank11"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank10">
+
+        <ImageView
+            android:id="@+id/rankingImg11"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#11"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg11"
+            app:layout_constraintTop_toTopOf="@id/rankingImg11"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg11"/>
+
+        <TextView
+            android:id="@+id/ranktitle11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position11"
+            app:layout_constraintTop_toTopOf="@id/position11"
+            app:layout_constraintBottom_toBottomOf="@id/position11"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes11"/>
+
+        <TextView
+            android:id="@+id/ranklikes11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle11"
+            app:layout_constraintTop_toTopOf="@id/ranktitle11"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle11"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes11"
+            app:layout_constraintTop_toTopOf="@id/ranklikes11"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes11"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rank12"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_ranking"
+        app:layout_constraintTop_toBottomOf="@id/rank11">
+
+        <ImageView
+            android:id="@+id/rankingImg12"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vengadores"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/position12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#12"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/rankingImg12"
+            app:layout_constraintTop_toTopOf="@id/rankingImg12"
+            app:layout_constraintBottom_toBottomOf="@id/rankingImg12"/>
+
+        <TextView
+            android:id="@+id/ranktitle12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Title"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/position12"
+            app:layout_constraintTop_toTopOf="@id/position12"
+            app:layout_constraintBottom_toBottomOf="@id/position12"
+            app:layout_constraintEnd_toStartOf="@id/ranklikes12"/>
+
+        <TextView
+            android:id="@+id/ranklikes12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000k"
+            android:textColor="#B811C7"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranktitle12"
+            app:layout_constraintTop_toTopOf="@id/ranktitle12"
+            app:layout_constraintBottom_toBottomOf="@id/ranktitle12"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/likesImg12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@+id/ranklikes12"
+            app:layout_constraintTop_toTopOf="@id/ranklikes12"
+            app:layout_constraintBottom_toBottomOf="@id/ranklikes12"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
