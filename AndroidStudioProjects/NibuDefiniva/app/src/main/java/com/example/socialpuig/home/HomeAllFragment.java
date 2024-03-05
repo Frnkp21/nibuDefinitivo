@@ -1,5 +1,6 @@
 package com.example.socialpuig.home;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,7 +13,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.socialpuig.R;
 import com.example.socialpuig.books.Book;
 import com.example.socialpuig.books.BookAdapter;
@@ -31,7 +36,7 @@ import java.util.List;
 public class HomeAllFragment extends Fragment {
 
     private FragmentHomeAllBinding binding;
-    private RecyclerView recyclerViewMovies;
+   // private RecyclerView recyclerViewMovies;
     private RecyclerView recyclerViewBooks;
     private RecyclerView recyclerViewContinueW;
    NavController navController;
@@ -52,13 +57,14 @@ public class HomeAllFragment extends Fragment {
         BottomNavigationView bottomNavView = requireActivity().findViewById(R.id.nav_view);
         bottomNavView.setVisibility(View.VISIBLE);
 
-        recyclerViewMovies = binding.recyclerViewMovie;
+       // recyclerViewMovies = binding.recyclerViewMovie;
         recyclerViewBooks = binding.recyclerViewBook;
         recyclerViewContinueW = binding.recyclerViewContinueW;
-        loadMovieList();
+        //loadMovieList();
         loadBookList();
         loadContinueWList();
         Button moviesButton = view.findViewById(R.id.moviesButon);
+        // Dentro del método onViewCreated del fragmento HomeAllFragment
         moviesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,15 +88,16 @@ public class HomeAllFragment extends Fragment {
                 navController.navigate(R.id.onlyBookFragment);
             }
         });
+
     }
 
-    private void loadMovieList() {
+    /*private void loadMovieList() {
         List<Movie> movieList = MovieDataSource.getMovieList();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerViewMovies.setLayoutManager(layoutManager);
         MovieAdapter adapter = new MovieAdapter(movieList);
         recyclerViewMovies.setAdapter(adapter);
-    }
+    }*/
 
     private void loadBookList() {
         List<Book> bookList = BookDataSource.getBookList();

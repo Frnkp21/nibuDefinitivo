@@ -122,13 +122,13 @@
         android:text="Movies"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/recyclerViewMovie"
+        app:layout_constraintBottom_toTopOf="@id/recyclerViewMovie2"
         app:layout_constraintTop_toBottomOf="@id/recyclerViewBook"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewMovie"
+            android:id="@+id/recyclerViewMovie2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/videoPlayerFragment"
+    android:orientation="horizontal">
+
+    <!-- Vista previa del video (puede ser una imagen de muestra) -->
+    <ImageView
+        android:id="@+id/videoPreviewImageView"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <!-- Controles de reproducción -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <SeekBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/progressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</LinearLayout>

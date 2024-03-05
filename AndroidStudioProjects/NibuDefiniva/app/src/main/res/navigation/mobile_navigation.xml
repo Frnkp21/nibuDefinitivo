@@ -66,6 +66,11 @@
         android:name="com.example.socialpuig.OnlySeriesFragment"
         android:label="fragment_only_series"
         tools:layout="@layout/fragment_only_series" />
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.example.socialpuig.VideoPlayerFragment"
+        android:label="fragment_video_player"
+        tools:layout="@layout/fragment_video_player" />
 
 
 </navigation>
