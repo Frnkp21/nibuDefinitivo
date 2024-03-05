@@ -4,11 +4,16 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.example.socialpuig.R;
 import com.example.socialpuig.books.Book;
 import com.example.socialpuig.books.BookAdapter;
 import com.example.socialpuig.books.BookDataSource;
@@ -19,6 +24,8 @@ import com.example.socialpuig.databinding.FragmentHomeAllBinding;
 import com.example.socialpuig.movies.Movie;
 import com.example.socialpuig.movies.MovieAdapter;
 import com.example.socialpuig.movies.MovieDataSource;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.List;
 
 public class HomeAllFragment extends Fragment {
@@ -27,6 +34,7 @@ public class HomeAllFragment extends Fragment {
     private RecyclerView recyclerViewMovies;
     private RecyclerView recyclerViewBooks;
     private RecyclerView recyclerViewContinueW;
+   NavController navController;
 
     @Nullable
     @Override
@@ -38,12 +46,42 @@ public class HomeAllFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        navController = Navigation.findNavController(view);
+
+        // Oculta el BottomNavigationView
+        BottomNavigationView bottomNavView = requireActivity().findViewById(R.id.nav_view);
+        bottomNavView.setVisibility(View.VISIBLE);
+
         recyclerViewMovies = binding.recyclerViewMovie;
         recyclerViewBooks = binding.recyclerViewBook;
         recyclerViewContinueW = binding.recyclerViewContinueW;
         loadMovieList();
         loadBookList();
         loadContinueWList();
+        Button moviesButton = view.findViewById(R.id.moviesButon);
+        moviesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navega al fragmento deseado cuando se presiona el botón
+                navController.navigate(R.id.onlyMovieFragment);
+            }
+        });
+        Button seriesButton = view.findViewById(R.id.seriesButon);
+        seriesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navega al fragmento deseado cuando se presiona el botón
+                navController.navigate(R.id.onlySeriesFragment);
+            }
+        });
+        Button booksButton = view.findViewById(R.id.booksButon);
+        booksButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navega al fragmento deseado cuando se presiona el botón
+                navController.navigate(R.id.onlyBookFragment);
+            }
+        });
     }
 
     private void loadMovieList() {

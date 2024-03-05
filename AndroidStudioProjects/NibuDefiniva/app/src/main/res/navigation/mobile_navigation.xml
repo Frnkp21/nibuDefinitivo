@@ -20,26 +20,7 @@
         android:name="com.example.socialpuig.registerFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.socialpuig.profileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.socialpuig.home.homeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/newPostFragment"
-        android:name="com.example.socialpuig.newPostFragment"
-        android:label="fragment_new_post"
-        tools:layout="@layout/fragment_new_post" />
-    <fragment
-        android:id="@+id/mediaFragment"
-        android:name="com.example.socialpuig.MediaFragment"
-        android:label="fragment_media"
-        tools:layout="@layout/fragment_media" />
+
     <fragment
         android:id="@+id/usernameFragment"
         android:name="com.example.socialpuig.UsernameFragment"
@@ -71,10 +52,20 @@
         android:label="fragment_more"
         tools:layout="@layout/fragment_more" />
     <fragment
-        android:id="@+id/homeRealFragment"
-        android:name="com.example.socialpuig.home.HomeRealFragment"
-        android:label="fragment_home_real"
-        tools:layout="@layout/fragment_home_real" />
+        android:id="@+id/onlyMovieFragment"
+        android:name="com.example.socialpuig.OnlyMovieFragment"
+        android:label="fragment_only_movie"
+        tools:layout="@layout/fragment_only_movie" />
+    <fragment
+        android:id="@+id/onlyBookFragment"
+        android:name="com.example.socialpuig.OnlyBookFragment"
+        android:label="fragment_only_book"
+        tools:layout="@layout/fragment_only_book" />
+    <fragment
+        android:id="@+id/onlySeriesFragment"
+        android:name="com.example.socialpuig.OnlySeriesFragment"
+        android:label="fragment_only_series"
+        tools:layout="@layout/fragment_only_series" />
 
 
 </navigation>

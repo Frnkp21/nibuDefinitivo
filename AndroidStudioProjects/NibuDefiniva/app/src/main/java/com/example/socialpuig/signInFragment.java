@@ -31,6 +31,7 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,10 +50,8 @@ public class signInFragment extends Fragment {
     private SignInButton googleSignInButton;
     private ActivityResultLauncher<Intent> activityResultLauncher;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         return inflater.inflate(R.layout.fragment_sign_in, container, false);
     }
 
@@ -60,7 +59,14 @@ public class signInFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // Encuentra el NavController
         navController = Navigation.findNavController(view);
+
+        // Oculta el BottomNavigationView
+        BottomNavigationView bottomNavView = requireActivity().findViewById(R.id.nav_view);
+        if (bottomNavView != null) {
+            bottomNavView.setVisibility(View.GONE);
+        }
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -99,6 +105,7 @@ public class signInFragment extends Fragment {
                 }
             }
         });
+
         googleSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

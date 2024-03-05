@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/homeallcontainer"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/onlyMovieFragment"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+android:background="@color/purpura">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/purpura">
+    android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/nibuSeries"
+        android:layout_width="450dp"
+        android:layout_height="480dp"
+        android:src="@drawable/nibuseries"
+        app:layout_constraintBottom_toTopOf="@id/searchAll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <ImageView
-            android:id="@+id/nibulogo2"
-            android:layout_width="450dp"
-            android:layout_height="450dp"
-            android:src="@drawable/nibulogo2"
-            app:layout_constraintBottom_toTopOf="@id/searchAll"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <EditText
+    <EditText
         android:id="@+id/searchAll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +35,7 @@
         android:padding="8dp"
         android:layout_margin="8dp"
         android:drawableTint="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@id/seriesButon"/>
+        app:layout_constraintBottom_toTopOf="@id/all2Buton"/>
 
     <Button
         android:id="@+id/moviesButon"
@@ -46,13 +44,14 @@
         android:text="Movies"
         app:layout_constraintBottom_toTopOf="@id/continueWatching"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/seriesButon"/>
+        app:layout_constraintEnd_toStartOf="@+id/all2Buton"/>
 
     <Button
-        android:id="@+id/seriesButon"
+        android:id="@+id/all2Buton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Series"
+        android:text="ALL"
+        android:backgroundTint="#3f3f3f"
         app:layout_constraintBottom_toTopOf="@id/continueWatching"
         app:layout_constraintStart_toEndOf="@+id/moviesButon"
         app:layout_constraintEnd_toStartOf="@+id/booksButon"/>
@@ -63,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="Books"
         app:layout_constraintBottom_toTopOf="@id/continueWatching"
-        app:layout_constraintStart_toEndOf="@+id/seriesButon"
+        app:layout_constraintStart_toEndOf="@+id/all2Buton"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
@@ -127,16 +126,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewMovie"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/moviesall"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/moviesall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

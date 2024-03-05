@@ -28,8 +28,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 public class MainActivity extends AppCompatActivity {
-
-    private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
     @Override
@@ -39,72 +37,14 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-       setSupportActionBar(binding.appBarMain.toolbar);
+        setSupportActionBar(binding.toolbar); // Configura la ActionBar
 
-        DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.homeFragment)
-                .setOpenableLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
-        View header = navigationView.getHeaderView(0);
-        final ImageView photo = header.findViewById(R.id.imageView);
-        final TextView name = header.findViewById(R.id.displayNameTextView);
-        final TextView email = header.findViewById(R.id.emailTextView);
-
-        FirebaseAuth.getInstance().addAuthStateListener(new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-
-                if(user != null){
-                    if (user.getPhotoUrl()!= null) {
-                        Glide.with(MainActivity.this)
-                                .load(FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl().toString())
-                                .circleCrop()
-                                .into(photo);
-                    }
-                    if (user.getDisplayName()!= null) {
-                        name.setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
-                    }
-                    email.setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());
-                }
-            }
-        });
-        FirebaseFirestore.getInstance().setFirestoreSettings(new FirebaseFirestoreSettings.Builder()
-                .setPersistenceEnabled(false)
-                .build());
-       navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller,
-                                             @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.signInFragment
-                        || destination.getId() == R.id.signInFragment) {
-                    binding.appBarMain.toolbar.setVisibility(View.GONE);
-                } else {
-                    binding.appBarMain.toolbar.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.socialFragment, R.id.savedFragment, R.id.homeAllFragment, R.id.rankingFragment, R.id.moreFragment
+        ).build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.navView, navController);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
-
 }

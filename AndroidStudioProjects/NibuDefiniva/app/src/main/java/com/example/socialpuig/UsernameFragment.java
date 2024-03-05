@@ -27,7 +27,7 @@ public class UsernameFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_username, container, false);
 
         // Obtener el NavController
-        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_content_main);
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
 
         // Configurar OnClickListener para el botón
         ImageButton nibutohomeButton = view.findViewById(R.id.nibupetToHome);
@@ -35,7 +35,7 @@ public class UsernameFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Navegar a otro Fragmento
-                navController.navigate(R.id.homeRealFragment);
+                navController.navigate(R.id.homeAllFragment);
             }
         });
 

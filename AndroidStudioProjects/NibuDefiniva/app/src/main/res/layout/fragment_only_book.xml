@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onlyMovieFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/purpura">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/nibuBooks"
+            android:layout_width="450dp"
+            android:layout_height="480dp"
+            android:src="@drawable/nibubooks"
+            app:layout_constraintBottom_toTopOf="@id/searchAll"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/searchAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="search all"
+            android:textColorHint="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edit_text"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:drawableTint="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/seriesButon"/>
+
+        <Button
+            android:id="@+id/moviesButon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movies"
+            app:layout_constraintBottom_toTopOf="@id/continueWatching"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/seriesButon"/>
+
+        <Button
+            android:id="@+id/seriesButon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SERIES"
+
+            app:layout_constraintBottom_toTopOf="@id/continueWatching"
+            app:layout_constraintStart_toEndOf="@+id/moviesButon"
+            app:layout_constraintEnd_toStartOf="@+id/all3Buton"/>
+
+        <Button
+            android:id="@+id/all3Buton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALL"
+            android:backgroundTint="#3f3f3f"
+            app:layout_constraintBottom_toTopOf="@id/continueWatching"
+            app:layout_constraintStart_toEndOf="@+id/seriesButon"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/continueWatching"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Continue Reading"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/recyclerViewContinueW"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewContinueW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/continueWatching"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+        <TextView
+            android:id="@+id/continueReading"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Continue Reading"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/recyclerViewBook"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewContinueW"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewBook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/continueReading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/moviesall"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Movies"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/recyclerViewMovie"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewBook"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/moviesall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
