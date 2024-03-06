@@ -91,6 +91,16 @@
         android:name="com.example.socialpuig.PartyChatFragment"
         android:label="fragment_party_chat"
         tools:layout="@layout/fragment_party_chat" />
+    <fragment
+        android:id="@+id/addUsernameFragment"
+        android:name="com.example.socialpuig.AddUsernameFragment"
+        android:label="fragment_add_username"
+        tools:layout="@layout/fragment_add_username" />
+    <fragment
+        android:id="@+id/partyChat2Fragment"
+        android:name="com.example.socialpuig.PartyChat2Fragment"
+        android:label="fragment_party_chat2"
+        tools:layout="@layout/fragment_party_chat2" />
 
 
 </navigation>

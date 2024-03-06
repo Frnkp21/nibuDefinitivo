@@ -44,7 +44,7 @@ public class registerFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
-                emailEditText = view.findViewById(R.id.emailEditText);
+        emailEditText = view.findViewById(R.id.emailEditText);
         passwordEditText = view.findViewById(R.id.passwordEditText);
         registerButton = view.findViewById(R.id.registerButton);
 
@@ -55,6 +55,16 @@ public class registerFragment extends Fragment {
             }
         });
         mAuth = FirebaseAuth.getInstance();
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+
+        Button loginbackButton = view.findViewById(R.id.gotoLoginAccountTextView);
+        loginbackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navegar a otro Fragmento
+                navController.navigate(R.id.signInFragment);
+            }
+        });
     }
     private void crearCuenta() {
         if (!validarFormulario()) {

@@ -8,7 +8,7 @@
     android:background="#1D0328">
 
     <ImageView
-        android:id="@+id/nibupet"
+        android:id="@+id/nibupetsplash"
         android:src="@drawable/nibupet"
         android:contentDescription="nibupet"
         android:layout_width="0dp"

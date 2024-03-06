@@ -10,6 +10,9 @@ import androidx.navigation.Navigation;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import com.example.socialpuig.databinding.ActivityMainBinding;
 
@@ -17,6 +20,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class SplashActivity extends AppCompatActivity {
+    ImageView appLogoImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +37,16 @@ public class SplashActivity extends AppCompatActivity {
         };
         Timer tiempo = new Timer();
         tiempo.schedule(tarea, 2000);
+
+
+
+        appLogoImage = findViewById(R.id.nibupetsplash);
+
+        Animation animationUp = AnimationUtils.loadAnimation(this,R.anim.anim_up);
+        Animation animationdown = AnimationUtils.loadAnimation(this,R.anim.anime_down);
+
+        appLogoImage.setAnimation(animationUp);
+
     }
 
 

@@ -2,50 +2,64 @@ package com.example.socialpuig;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.SeekBar;
-import android.widget.TextView;
+
+import com.example.socialpuig.databinding.FragmentVideoPlayerBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class VideoPlayerFragment extends Fragment {
-
-    private ImageView videoPreviewImageView;
-    private ImageButton playButton;
-    private SeekBar progressBar;
-    private TextView progressTextView;
-
-    public VideoPlayerFragment() {
-        // Constructor vacío requerido
-    }
+    private FragmentVideoPlayerBinding binding;
+    private NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_video_player, container, false);
+        binding = FragmentVideoPlayerBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+    }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        // Inicializar vistas
-        videoPreviewImageView = rootView.findViewById(R.id.videoPreviewImageView);
-        playButton = rootView.findViewById(R.id.playButton);
-        progressBar = rootView.findViewById(R.id.progressBar);
-        progressTextView = rootView.findViewById(R.id.progressTextView);
+        // Buscar el BottomNavigationView en la actividad principal
+        BottomNavigationView bottomNavView = requireActivity().findViewById(R.id.nav_view);
 
-        // Configurar acciones para los controles de reproducción
-        playButton.setOnClickListener(new View.OnClickListener() {
+        // Verificar si el BottomNavigationView no es nulo antes de cambiar la visibilidad
+        if (bottomNavView != null) {
+            bottomNavView.setVisibility(View.GONE);
+        }
+
+        // Encontrar el NavController para la navegación
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+
+        // Configurar el botón para cerrar el video
+        ImageButton closevideoButton = view.findViewById(R.id.closeVideo);
+        closevideoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Acción para iniciar o pausar la reproducción
-                // Aquí puedes simular la reproducción de video
+                // Navegar a otro Fragmento
+                navController.navigate(R.id.homeAllFragment);
             }
         });
 
-        // Configurar acciones para la barra de progreso (si es necesario)
-
-        return rootView;
+        // Configurar el botón para abrir el chat
+        ImageButton chatopenButton = view.findViewById(R.id.partychat3);
+        chatopenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navegar a otro Fragmento
+                navController.navigate(R.id.partyChat2Fragment);
+            }
+        });
     }
 }

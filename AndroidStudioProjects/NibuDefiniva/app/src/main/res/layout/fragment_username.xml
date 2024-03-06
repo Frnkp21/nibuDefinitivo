@@ -34,10 +34,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nibulogo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/add" />
+        app:layout_constraintBottom_toTopOf="@id/agregar" />
 
     <ImageButton
-        android:id="@+id/add"
+        android:id="@+id/agregar"
         android:layout_width="61.84dp"
         android:layout_height="61.52dp"
         android:background="@drawable/add"

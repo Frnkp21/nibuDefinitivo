@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D0328">
+
+    <ImageButton
+        android:id="@+id/patras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="@color/fui_transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"/>
+    <ImageView
+        android:id="@+id/nibulogo"
+        android:layout_width="86dp"
+        android:layout_height="34dp"
+        android:contentDescription="nibulogo"
+        android:src="@drawable/nibulogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addimage" />
+
+    <ImageButton
+        android:id="@+id/addimage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/addimage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nibulogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/username" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add image"
+        app:layout_constraintTop_toTopOf="@id/addimage"
+        app:layout_constraintBottom_toBottomOf="@id/addimage"
+        app:layout_constraintStart_toStartOf="@id/addimage"
+        app:layout_constraintEnd_toEndOf="@id/addimage"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:hint="Username"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/background_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/addimage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/confirmar"/>
+
+     <Button
+         android:id="@+id/confirmar"
+         android:layout_width="200dp"
+         android:layout_height="70dp"
+         android:text="Confirm"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/username"
+         app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
