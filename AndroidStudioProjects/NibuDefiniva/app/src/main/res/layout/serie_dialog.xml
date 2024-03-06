@@ -6,7 +6,7 @@
     android:background="@color/black">
 
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/seriesImageView"
         android:layout_width="200dp"
         android:layout_height="300dp"
         android:src="@drawable/interrogante"
@@ -14,10 +14,10 @@
         android:scaleType="fitCenter"/>
 
     <TextView
-        android:id="@+id/titulo"
+        android:id="@+id/seriesTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img"
+        android:layout_below="@id/seriesImageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="Titulo"
@@ -26,23 +26,46 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/sinopsis"
+        android:id="@+id/seriesSynopsisTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titulo"
+        android:layout_below="@id/seriesTitleTextView"
         android:text="Sinopsis"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:textColor="@android:color/white"
         android:textSize="16sp" />
+
     <ImageButton
-        android:id="@+id/read2Button"
+        android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sinopsis"
+        android:layout_below="@id/seriesSynopsisTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:background="@color/fui_transparent"
         android:src="@drawable/play"/>
+
+    <TextView
+        android:id="@+id/seasonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seriesTitleTextView"
+        android:layout_marginTop="46dp"
+        android:text="T1"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/episodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seriesTitleTextView"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="45dp"
+        android:layout_toEndOf="@+id/seasonTextView"
+        android:text="Cap 1"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
 
 </RelativeLayout>

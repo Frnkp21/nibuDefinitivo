@@ -43,13 +43,12 @@ public class BookDialog extends AlertDialog {
         titulo.setText(title);
         sinopsis.setText("Número de páginas: " + pageCount);
 
-        // Configurar OnClickListener para el botón de lectura
         read2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Navegar a otro Fragmento
                 navController.navigate(R.id.bookPlayerFragment);
-                dismiss(); // Cerrar el diálogo después de iniciar la transición al otro fragmento
+                dismiss();
             }
         });
     }
