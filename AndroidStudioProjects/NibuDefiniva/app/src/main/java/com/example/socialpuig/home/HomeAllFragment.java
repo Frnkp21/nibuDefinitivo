@@ -88,7 +88,234 @@ public class HomeAllFragment extends Fragment {
                 navController.navigate(R.id.onlyBookFragment);
             }
         });
+        ImageView m1images = view.findViewById(R.id.movies1);
+        m1images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
 
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+
+        ImageView m2images = view.findViewById(R.id.movies2);
+        m2images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView m3images = view.findViewById(R.id.movies3);
+        m3images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView m4images = view.findViewById(R.id.movies4);
+        m4images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView m5images = view.findViewById(R.id.movies5);
+        m5images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+
+        //Series
+        ImageView s1images = view.findViewById(R.id.series1);
+        s1images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView s2images = view.findViewById(R.id.series2);
+        s2images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView s3images = view.findViewById(R.id.series3);
+        s3images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView s4images = view.findViewById(R.id.series4);
+        s4images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView s5images = view.findViewById(R.id.series5);
+        s5images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.movie_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+
+        //books
+        ImageView b1images = view.findViewById(R.id.books1);
+        b1images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.book_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView b2images = view.findViewById(R.id.books2);
+        b2images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.book_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
+        ImageView b3images = view.findViewById(R.id.books3);
+        b3images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.book_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });ImageView b4images = view.findViewById(R.id.books4);
+        b4images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.book_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });ImageView b5images = view.findViewById(R.id.books5);
+        b5images.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Infla el diseño del diálogo personalizado
+                View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.book_dialog, null);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setView(dialogView);
+
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.show();
+            }
+        });
     }
 
     /*private void loadMovieList() {

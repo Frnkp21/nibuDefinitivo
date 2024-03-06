@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purpura">
+
+<ImageView
+    android:id="@+id/fondoFriendProfile"
+    android:layout_width="600dp"
+    android:layout_height="300dp"
+    android:src="@drawable/interrogante"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageButton
+        android:id="@+id/backtochat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close"
+        android:background="@color/fui_transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"/>
+
+    <ImageView
+        android:id="@+id/fotoFriendProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/josesito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/block"
+        app:layout_constraintStart_toEndOf="@id/block"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <TextView
+        android:id="@+id/nombreperfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JoseDalePalPiso"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/fotoFriendProfile"
+        app:layout_constraintBottom_toBottomOf="@id/fotoFriendProfile"
+        app:layout_constraintTop_toTopOf="@id/fotoFriendProfile"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/unfriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unfriend"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nombreperfil"
+        app:layout_constraintEnd_toStartOf="@id/block"/>
+
+    <Button
+        android:id="@+id/block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="block"
+        android:textColor="@color/black"
+        android:backgroundTint="#FF0000"
+        app:layout_constraintStart_toEndOf="@id/unfriend"
+        app:layout_constraintTop_toBottomOf="@id/nombreperfil"
+        app:layout_constraintEnd_toStartOf="@id/fotoFriendProfile"/>
+
+    <TextView
+        android:id="@+id/recentlyseen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recently seen"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/unfriend"
+        app:layout_constraintEnd_toEndOf="@id/block"/>
+
+    <ImageView
+        android:id="@+id/recentlyseen1"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved1"
+        app:layout_constraintTop_toBottomOf="@id/recentlyseen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/recentlyseen2"
+        app:layout_constraintBottom_toTopOf="@id/Saved" />
+    <ImageView
+        android:id="@+id/recentlyseen2"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved2"
+        app:layout_constraintTop_toBottomOf="@id/recentlyseen"
+        app:layout_constraintStart_toEndOf="@id/recentlyseen1"
+        app:layout_constraintEnd_toStartOf="@id/recentlyseen3"
+        app:layout_constraintBottom_toTopOf="@id/Saved" />
+    <ImageView
+        android:id="@+id/recentlyseen3"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved3"
+        app:layout_constraintTop_toBottomOf="@id/recentlyseen"
+        app:layout_constraintStart_toEndOf="@id/recentlyseen2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Saved" />
+
+    <TextView
+        android:id="@+id/Saved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saved"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recentlyseen1"
+        app:layout_constraintEnd_toEndOf="@id/unfriend"/>
+
+    <ImageView
+        android:id="@+id/savedF5"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved5"
+        app:layout_constraintTop_toBottomOf="@id/Saved"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/recentlyseen2"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <ImageView
+        android:id="@+id/savedF4"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved6"
+        app:layout_constraintTop_toBottomOf="@id/Saved"
+        app:layout_constraintStart_toEndOf="@id/recentlyseen1"
+        app:layout_constraintEnd_toStartOf="@id/recentlyseen3"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <ImageView
+        android:id="@+id/savedF6"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/saved4"
+        app:layout_constraintTop_toBottomOf="@id/Saved"
+        app:layout_constraintStart_toEndOf="@id/recentlyseen2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

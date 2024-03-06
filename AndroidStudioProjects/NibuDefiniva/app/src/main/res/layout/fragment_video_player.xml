@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/videoPlayerFragment"
+    android:id="@+id/fragment_container"
     android:orientation="horizontal">
 
     <!-- Vista previa del video (puede ser una imagen de muestra) -->

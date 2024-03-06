@@ -8,13 +8,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.socialpuig.MovieInfoDialog;
+import com.example.socialpuig.movies.MovieInfoDialog;
 import com.example.socialpuig.R;
-import com.example.socialpuig.VideoPlayerFragment;
 
 import java.util.List;
 
@@ -61,8 +62,10 @@ public class ContinueWAdapter extends RecyclerView.Adapter<ContinueWAdapter.View
     }
 
     private void showMovieInfoDialog(Context context, String imageUrl, String title, String synopsis) {
+        NavController navController = Navigation.findNavController((FragmentActivity) context, R.id.nav_host_fragment_activity_main);
+
         // Crear y mostrar el diálogo
-        MovieInfoDialog dialog = new MovieInfoDialog(context, imageUrl, title, synopsis);
+        MovieInfoDialog dialog = new MovieInfoDialog(context, imageUrl, title, synopsis, navController);
         dialog.show();
     }
 

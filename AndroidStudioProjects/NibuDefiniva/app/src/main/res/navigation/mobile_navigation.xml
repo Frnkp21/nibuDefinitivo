@@ -71,6 +71,21 @@
         android:name="com.example.socialpuig.VideoPlayerFragment"
         android:label="fragment_video_player"
         tools:layout="@layout/fragment_video_player" />
+    <fragment
+        android:id="@+id/friendChatFragment"
+        android:name="com.example.socialpuig.FriendChatFragment"
+        android:label="fragment_friend_chat"
+        tools:layout="@layout/fragment_friend_chat" />
+    <fragment
+        android:id="@+id/settingsFriendFragment"
+        android:name="com.example.socialpuig.SettingsFriendFragment"
+        android:label="fragment_settings_friend"
+        tools:layout="@layout/fragment_settings_friend" />
+    <fragment
+        android:id="@+id/bookPlayerFragment"
+        android:name="com.example.socialpuig.BookPlayerFragment"
+        android:label="fragment_book_player"
+        tools:layout="@layout/fragment_book_player" />
 
 
 </navigation>

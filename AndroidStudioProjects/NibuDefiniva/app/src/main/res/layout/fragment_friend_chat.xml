@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purpura">
+
+    <ImageButton
+        android:id="@+id/backtofriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="@color/fui_transparent"
+        app:layout_constraintEnd_toStartOf="@id/profileImg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/profileImg"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"/>
+
+    <ImageView
+        android:id="@+id/profileImg"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/josesito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewChat"
+        app:layout_constraintEnd_toStartOf="@id/profilenamefriend"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/profilenamefriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friend1"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/profileImg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/settingsProfile"
+        app:layout_constraintBottom_toTopOf="@id/primermessage"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"/>
+
+    <ImageButton
+        android:id="@+id/settingsProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/settings"
+        android:background="@color/fui_transparent"
+        app:layout_constraintStart_toEndOf="@+id/profilenamefriend"
+        app:layout_constraintTop_toTopOf="@+id/profilenamefriend"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/primermessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Hola, quieres ver una peli?"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:background="#4399FF"
+        app:layout_constraintBottom_toTopOf="@id/recyclerViewChat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImg" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/messageInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/primermessage" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/messageInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Type a message..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/messageInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send"
+        app:layout_constraintBottom_toBottomOf="@id/messageInputLayout"
+        app:layout_constraintEnd_toEndOf="@id/messageInputLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

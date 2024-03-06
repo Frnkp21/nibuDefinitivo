@@ -33,4 +33,15 @@
         android:textColor="@android:color/white"
         android:textSize="16sp" />
 
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movieSynopsisTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/fui_transparent"
+        android:src="@drawable/play"/>
+
+
 </RelativeLayout>

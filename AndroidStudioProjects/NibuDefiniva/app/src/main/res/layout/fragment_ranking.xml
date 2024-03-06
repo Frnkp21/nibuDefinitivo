@@ -46,7 +46,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/saved6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position1"
             app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +118,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/saved4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position2"
             app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +141,7 @@
             android:id="@+id/ranktitle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="IWantToEatYourPancreas"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -155,7 +155,7 @@
             android:id="@+id/ranklikes2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="9912k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -163,7 +163,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle2"
             app:layout_constraintTop_toTopOf="@id/ranktitle2"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle2"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg2"/>
 
         <ImageView
             android:id="@+id/likesImg2"
@@ -191,7 +191,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/saved1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position3"
             app:layout_constraintStart_toStartOf="parent"
@@ -214,7 +214,7 @@
             android:id="@+id/ranktitle3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="Attack on titan"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -228,7 +228,7 @@
             android:id="@+id/ranklikes3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="9000k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -236,7 +236,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle3"
             app:layout_constraintTop_toTopOf="@id/ranktitle3"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle3"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg3"/>
 
         <ImageView
             android:id="@+id/likesImg3"
@@ -263,7 +263,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/movie8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position4"
             app:layout_constraintStart_toStartOf="parent"
@@ -286,7 +286,7 @@
             android:id="@+id/ranktitle4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="Venom"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -300,7 +300,7 @@
             android:id="@+id/ranklikes4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="8889k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -308,7 +308,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle4"
             app:layout_constraintTop_toTopOf="@id/ranktitle4"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle4"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg4"/>
 
         <ImageView
             android:id="@+id/likesImg4"
@@ -335,7 +335,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/manga2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position5"
             app:layout_constraintStart_toStartOf="parent"
@@ -358,7 +358,7 @@
             android:id="@+id/ranktitle5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="Tokyo ghoul"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -372,7 +372,7 @@
             android:id="@+id/ranklikes5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="7587k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -380,7 +380,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle5"
             app:layout_constraintTop_toTopOf="@id/ranktitle5"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle5"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg5"/>
 
         <ImageView
             android:id="@+id/likesImg5"
@@ -407,7 +407,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/saved7"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position6"
             app:layout_constraintStart_toStartOf="parent"
@@ -430,7 +430,7 @@
             android:id="@+id/ranktitle6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="Lucifer"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -444,7 +444,7 @@
             android:id="@+id/ranklikes6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="6985k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -452,7 +452,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle6"
             app:layout_constraintTop_toTopOf="@id/ranktitle6"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle6"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg6"/>
 
         <ImageView
             android:id="@+id/likesImg6"
@@ -479,7 +479,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/saved2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position7"
             app:layout_constraintStart_toStartOf="parent"
@@ -502,7 +502,7 @@
             android:id="@+id/ranktitle7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="Rick y Morty"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -516,7 +516,7 @@
             android:id="@+id/ranklikes7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="5761k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -524,7 +524,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle7"
             app:layout_constraintTop_toTopOf="@id/ranktitle7"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle7"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg7"/>
 
         <ImageView
             android:id="@+id/likesImg7"
@@ -574,7 +574,7 @@
             android:id="@+id/ranktitle8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="Advengers"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -588,7 +588,7 @@
             android:id="@+id/ranklikes8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="5400k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -596,7 +596,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle8"
             app:layout_constraintTop_toTopOf="@id/ranktitle8"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle8"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg8"/>
 
         <ImageView
             android:id="@+id/likesImg8"
@@ -623,7 +623,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/moive4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position9"
             app:layout_constraintStart_toStartOf="parent"
@@ -646,7 +646,7 @@
             android:id="@+id/ranktitle9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="La Monja"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -660,7 +660,7 @@
             android:id="@+id/ranklikes9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="4679k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -668,7 +668,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle9"
             app:layout_constraintTop_toTopOf="@id/ranktitle9"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle9"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg9"/>
 
         <ImageView
             android:id="@+id/likesImg9"
@@ -695,7 +695,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
+            android:src="@drawable/movie5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/position10"
             app:layout_constraintStart_toStartOf="parent"
@@ -718,7 +718,7 @@
             android:id="@+id/ranktitle10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Movie Title"
+            android:text="Morbius"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -732,7 +732,7 @@
             android:id="@+id/ranklikes10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10000k"
+            android:text="3001k"
             android:textColor="#B811C7"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -740,7 +740,7 @@
             app:layout_constraintStart_toEndOf="@+id/ranktitle10"
             app:layout_constraintTop_toTopOf="@id/ranktitle10"
             app:layout_constraintBottom_toBottomOf="@id/ranktitle10"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/likesImg10"/>
 
         <ImageView
             android:id="@+id/likesImg10"
@@ -754,151 +754,11 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/rank11"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@drawable/background_ranking"
-        app:layout_constraintTop_toBottomOf="@id/rank10">
-
-        <ImageView
-            android:id="@+id/rankingImg11"
+        <TextView
+            android:id="@+id/espacioblanco"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="16dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/position11"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/position11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="#11"
-            android:textColor="#B811C7"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:ellipsize="end"
-            app:layout_constraintStart_toEndOf="@+id/rankingImg11"
-            app:layout_constraintTop_toTopOf="@id/rankingImg11"
-            app:layout_constraintBottom_toBottomOf="@id/rankingImg11"/>
-
-        <TextView
-            android:id="@+id/ranktitle11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Movie Title"
-            android:textColor="#B811C7"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:ellipsize="end"
-            app:layout_constraintStart_toEndOf="@+id/position11"
-            app:layout_constraintTop_toTopOf="@id/position11"
-            app:layout_constraintBottom_toBottomOf="@id/position11"
-            app:layout_constraintEnd_toStartOf="@id/ranklikes11"/>
-
-        <TextView
-            android:id="@+id/ranklikes11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10000k"
-            android:textColor="#B811C7"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:ellipsize="end"
-            app:layout_constraintStart_toEndOf="@+id/ranktitle11"
-            app:layout_constraintTop_toTopOf="@id/ranktitle11"
-            app:layout_constraintBottom_toBottomOf="@id/ranktitle11"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-            android:id="@+id/likesImg11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/like"
-            android:ellipsize="end"
-            app:layout_constraintStart_toEndOf="@+id/ranklikes11"
-            app:layout_constraintTop_toTopOf="@id/ranklikes11"
-            app:layout_constraintBottom_toBottomOf="@id/ranklikes11"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/rank12"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@drawable/background_ranking"
-        app:layout_constraintTop_toBottomOf="@id/rank11">
-
-        <ImageView
-            android:id="@+id/rankingImg12"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="16dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/vengadores"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/position12"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/position12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="#12"
-            android:textColor="#B811C7"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:ellipsize="end"
-            app:layout_constraintStart_toEndOf="@+id/rankingImg12"
-            app:layout_constraintTop_toTopOf="@id/rankingImg12"
-            app:layout_constraintBottom_toBottomOf="@id/rankingImg12"/>
-
-        <TextView
-            android:id="@+id/ranktitle12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Movie Title"
-            android:textColor="#B811C7"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:ellipsize="end"
-            app:layout_constraintStart_toEndOf="@+id/position12"
-            app:layout_constraintTop_toTopOf="@id/position12"
-            app:layout_constraintBottom_toBottomOf="@id/position12"
-            app:layout_constraintEnd_toStartOf="@id/ranklikes12"/>
-
-        <TextView
-            android:id="@+id/ranklikes12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10000k"
-            android:textColor="#B811C7"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:ellipsize="end"
-            app:layout_constraintStart_toEndOf="@+id/ranktitle12"
-            app:layout_constraintTop_toTopOf="@id/ranktitle12"
-            app:layout_constraintBottom_toBottomOf="@id/ranktitle12"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-            android:id="@+id/likesImg12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/like"
-            android:ellipsize="end"
-            app:layout_constraintStart_toEndOf="@+id/ranklikes12"
-            app:layout_constraintTop_toTopOf="@id/ranklikes12"
-            app:layout_constraintBottom_toBottomOf="@id/ranklikes12"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:layout_height="120dp"
+            app:layout_constraintTop_toBottomOf="@id/rank10"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
