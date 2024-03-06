@@ -14,14 +14,14 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 
-public class BookPlayerFragment extends Fragment {
-    private NavController navController;
+public class PartyChatFragment extends Fragment {
 
+    private NavController navController;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_book_player, container, false);
+        return inflater.inflate(R.layout.fragment_party_chat, container, false);
     }
 
     @Override
@@ -30,12 +30,12 @@ public class BookPlayerFragment extends Fragment {
 
         navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
 
-        ImageButton gotopartychatButton = view.findViewById(R.id.partychatt);
-        gotopartychatButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton backtobookplayerButton = view.findViewById(R.id.backtoback);
+        backtobookplayerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Navegar a otro Fragmento
-                navController.navigate(R.id.partyChatFragment);
+                navController.navigate(R.id.bookPlayerFragment);
             }
         });
     }

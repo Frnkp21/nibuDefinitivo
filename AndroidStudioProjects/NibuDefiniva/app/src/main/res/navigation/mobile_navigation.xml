@@ -86,6 +86,11 @@
         android:name="com.example.socialpuig.BookPlayerFragment"
         android:label="fragment_book_player"
         tools:layout="@layout/fragment_book_player" />
+    <fragment
+        android:id="@+id/partyChatFragment"
+        android:name="com.example.socialpuig.PartyChatFragment"
+        android:label="fragment_party_chat"
+        tools:layout="@layout/fragment_party_chat" />
 
 
 </navigation>

@@ -1,10 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BookPlayerFragment">
 
+    <ImageView
+        android:id="@+id/mangapanel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/mangapanel"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+    <!-- Barra negra arriba -->
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backtoback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="@color/fui_transparent"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/capbar"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topBar" />
+    <TextView
+        android:id="@+id/cap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="@+id/capbar"
+        app:layout_constraintStart_toStartOf="@id/capbar"
+        app:layout_constraintTop_toTopOf="@id/capbar"
+        app:layout_constraintBottom_toBottomOf="@id/capbar"/>
+    <ImageButton
+        android:id="@+id/arrowfront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowfront"
+        android:background="@color/fui_transparent"
+        app:layout_constraintStart_toEndOf="@id/capbar"
+        app:layout_constraintBottom_toBottomOf="@id/cap"/>
+
+    <ImageButton
+        android:id="@+id/arrowback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowback"
+        android:background="@color/fui_transparent"
+        app:layout_constraintEnd_toStartOf="@id/capbar"
+        app:layout_constraintBottom_toBottomOf="@id/cap"/>
+
+    <ImageButton
+        android:id="@+id/partychatt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chat"
+        android:background="@color/fui_transparent"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
-</FrameLayout>
+    <View
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/readpary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/readpary"
+        android:background="@color/fui_transparent"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/bottomBar"
+        app:layout_constraintTop_toTopOf="@id/bottomBar"
+        app:layout_constraintStart_toStartOf="@id/bottomBar"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
