@@ -28,6 +28,7 @@ public class VideoPlayerFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_video_player, container, false);
 
+
         // Inicializar vistas
         videoPreviewImageView = rootView.findViewById(R.id.videoPreviewImageView);
         playButton = rootView.findViewById(R.id.playButton);

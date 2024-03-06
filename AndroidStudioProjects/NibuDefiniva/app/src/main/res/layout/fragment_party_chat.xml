@@ -42,7 +42,8 @@
         app:layout_constraintBottom_toTopOf="@id/segundomessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profilenamefriend"/>
 
     <TextView
         android:id="@+id/segundomessage"
@@ -53,10 +54,8 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:background="#DCE8FF"
-        app:layout_constraintEnd_toStartf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/primermessage" />
+        app:layout_constraintTop_toBottomOf="@id/primermessage"/>
 
 
     <TextView
