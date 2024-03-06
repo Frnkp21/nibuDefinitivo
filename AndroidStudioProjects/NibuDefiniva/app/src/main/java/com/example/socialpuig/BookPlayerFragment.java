@@ -58,5 +58,15 @@ public class BookPlayerFragment extends Fragment {
                 navController.navigate(R.id.homeAllFragment);
             }
         });
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+
+        ImageButton shareplayButton = view.findViewById(R.id.readpary);
+        shareplayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navegar a otro Fragmento
+                navController.navigate(R.id.watchpartyFragment);
+            }
+        });
     }
 }

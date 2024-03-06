@@ -61,5 +61,15 @@ public class VideoPlayerFragment extends Fragment {
                 navController.navigate(R.id.partyChat2Fragment);
             }
         });
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
+
+        ImageButton shareplayButton = view.findViewById(R.id.videoFriends);
+        shareplayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navegar a otro Fragmento
+                navController.navigate(R.id.watchparty2Fragment);
+            }
+        });
     }
 }

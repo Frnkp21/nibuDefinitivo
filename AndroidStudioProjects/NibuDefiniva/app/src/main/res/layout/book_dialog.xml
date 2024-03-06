@@ -20,9 +20,9 @@
         android:layout_below="@id/img"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Titulo"
+        android:text="Título"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
     <TextView
@@ -36,15 +36,36 @@
         android:textColor="@android:color/white"
         android:textSize="16sp" />
 
-    <ImageButton
-        android:id="@+id/read2Button"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_below="@id/sinopsis"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:background="@color/fui_transparent"
-        android:src="@drawable/play"/>
+        android:layout_marginTop="16dp">
 
+        <ImageButton
+            android:id="@+id/read2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/play"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageButton
+            android:id="@+id/likeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/likeapagado"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageButton
+            android:id="@+id/savedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/savedoff"/>
+    </LinearLayout>
 
 </RelativeLayout>

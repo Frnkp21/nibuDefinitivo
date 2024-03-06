@@ -53,9 +53,9 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
     implementation ("com.firebaseui:firebase-ui-firestore:8.0.2")
-    implementation ("com.firebaseui:firebase-ui-database:8.0.2")
     implementation ("com.firebaseui:firebase-ui-auth:8.0.2")
     implementation ("com.firebaseui:firebase-ui-storage:8.0.2")
     implementation ("androidx.navigation:navigation-ui:2.3.0-alpha06")
+
 
 }

@@ -1,4 +1,4 @@
-package com.example.socialpuig.more;
+package com.example.socialpuig;
 
 import android.os.Bundle;
 
@@ -14,18 +14,20 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.example.socialpuig.R;
+import com.example.socialpuig.databinding.FragmentBookPlayerBinding;
+import com.example.socialpuig.databinding.FragmentEditProfileBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MoreFragment extends Fragment {
+
+public class EditProfileFragment extends Fragment {
+    private FragmentEditProfileBinding binding;
+
     private NavController navController;
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_more, container, false);
+        binding = FragmentEditProfileBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     @Override
@@ -33,26 +35,25 @@ public class MoreFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         BottomNavigationView bottomNavView = requireActivity().findViewById(R.id.nav_view);
-        bottomNavView.setVisibility(View.VISIBLE);
+        bottomNavView.setVisibility(View.GONE);
 
         navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
 
-        Button logoutButton = view.findViewById(R.id.logoutButton);
-        logoutButton.setOnClickListener(new View.OnClickListener() {
+        Button confirmButton = view.findViewById(R.id.confirmar);
+        confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navegar a otro Fragmento
-                navController.navigate(R.id.signInFragment);
+                // Navega al fragmento deseado cuando se presiona el botón
+                navController.navigate(R.id.moreFragment);
             }
         });
-        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main);
 
-        Button editProfileButton = view.findViewById(R.id.editProfileButton);
-        editProfileButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton salirButton = view.findViewById(R.id.patras);
+        salirButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navegar a otro Fragmento
-                navController.navigate(R.id.editProfileFragment);
+                // Navega al fragmento deseado cuando se presiona el botón
+                navController.navigate(R.id.moreFragment);
             }
         });
     }

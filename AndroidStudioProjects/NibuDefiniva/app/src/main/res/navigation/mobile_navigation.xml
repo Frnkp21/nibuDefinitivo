@@ -101,6 +101,21 @@
         android:name="com.example.socialpuig.PartyChat2Fragment"
         android:label="fragment_party_chat2"
         tools:layout="@layout/fragment_party_chat2" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.socialpuig.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/watchpartyFragment"
+        android:name="com.example.socialpuig.WatchpartyFragment"
+        android:label="fragment_watchparty"
+        tools:layout="@layout/fragment_watchparty" />
+    <fragment
+        android:id="@+id/watchparty2Fragment"
+        android:name="com.example.socialpuig.Watchparty2Fragment"
+        android:label="fragment_watchparty2"
+        tools:layout="@layout/fragment_watchparty2" />
 
 
 </navigation>
